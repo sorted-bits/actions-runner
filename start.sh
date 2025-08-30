@@ -3,6 +3,7 @@
 REPO=$REPO
 ORG=$ORG
 ACCESS_TOKEN=$ACCESS_TOKEN
+RUNNER_GROUP=${RUNNER_GROUP:-"Default"}
 
 if [[ -z $REPO && -z $ORG ]]; then
   echo "You must set the REPO or ORG environment variable"
@@ -23,7 +24,7 @@ REG_TOKEN=$(curl -sX POST -H "Authorization: token ${ACCESS_TOKEN}" -H "Accept: 
 
 cd /home/docker/actions-runner
 
-./config.sh --url https://github.com/${VALUE} --token ${REG_TOKEN}
+./config.sh --url https://github.com/${VALUE} --token ${REG_TOKEN} --runnergroup ${RUNNER_GROUP}
 
 cleanup() {
     echo "Removing runner..."

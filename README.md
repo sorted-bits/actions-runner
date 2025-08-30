@@ -27,6 +27,7 @@ docker run \
   --detach \
   --env ORG=<ORG-NAME> \
   --env ACCESS_TOKEN=<ACCESS-TOKEN> \
+  --env RUNNER_GROUP=<RUNNER GROUP NAME> \ # Optional runner group, otherwise Default
   --name runner \
   runner-image
   ```
@@ -44,8 +45,10 @@ docker run \
   --detach \
   --env REPO=<REPO-NAME> \
   --env ACCESS_TOKEN=<ACCESS-TOKEN> \
+  --env RUNNER_GROUP=<RUNNER GROUP NAME> \ # Optional runner group, otherwise Default
   --name runner \
   runner-image
   ```
 
   **Tip:** Your `<REPO-NAME>` should contain your username as well, e.g. `wimhaanstra/some-repo`
+

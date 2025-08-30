@@ -5,5 +5,6 @@ docker run \
   --detach \
   --env ORG="$1" \
   --env ACCESS_TOKEN="$2" \
+  --env RUNNER_GROUP="$3" \
   --name runner \
-  runner-image
+action-runner:latest

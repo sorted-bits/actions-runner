@@ -1,5 +1,6 @@
 # base
 FROM --platform=linux/amd64 ubuntu:20.04
+LABEL maintainer="wim@sortedbits.com"
 
 # set the github runner version
 ARG RUNNER_VERSION="2.328.0"

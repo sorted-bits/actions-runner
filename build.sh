@@ -1,1 +1,1 @@
-docker build --tag runner-image .
+docker build --tag action-runner:latest .
